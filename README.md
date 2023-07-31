@@ -1,2 +1,2 @@
 # euler_100
-First hundred problems from projecteuler.net
+First hundred problems from [Project Euler](https://projecteuler.net)
