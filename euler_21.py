@@ -1,12 +1,4 @@
-from utils import timer
-
-
-def sum_of_proper_divisors(number: int) -> int:
-    result = 1
-    for k in range(2, int(number**0.5) + 1):
-        if number % k == 0:
-            result += k + number // k
-    return result
+from utils import timer, sum_of_proper_divisors
 
 
 @timer

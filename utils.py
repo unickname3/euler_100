@@ -26,7 +26,7 @@ def how_many_numbers(quantity_of_primes: int) -> int:
 
 def get_primes_list(less_than: int = 0, quantity_of_primes: int = 0) -> list[int]:
     """
-    Fumction return list of primes numbers with quantity_of_primes primes numbers less than less_than
+    Function return list of primes numbers with quantity_of_primes primes numbers less than less_than
     """
     if less_than == 0:
         less_than = how_many_numbers(quantity_of_primes=quantity_of_primes)
@@ -46,3 +46,18 @@ def get_primes_list(less_than: int = 0, quantity_of_primes: int = 0) -> list[int
         return primes[:quantity_of_primes]
 
     return primes
+
+
+def sum_of_proper_divisors(number: int) -> int:
+    """
+    Function calculate sum of proper divisors for number
+    """
+    result = 1
+    for k in range(2, int(number**0.5) + 1):
+        if number % k == 0:
+            pairs_num = number // k
+            if pairs_num != k:
+                result += k + number // k
+            else:
+                result += k
+    return result
