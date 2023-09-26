@@ -1,4 +1,4 @@
-from utils import timer, get_primes_list
+from utils import timer
 
 
 def sum_of_proper_divisors(number: int) -> int:
@@ -11,7 +11,6 @@ def sum_of_proper_divisors(number: int) -> int:
 
 @timer
 def euler_21() -> int:
-    # primes = get_primes_list(less_than=10000)
     answer = 0
     d_dict = {}
     for number in range(10000):
