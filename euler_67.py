@@ -4,13 +4,12 @@ TRIANGLE_FILENAME = "0067_triangle.txt"
 
 
 @timer
-def euler_18() -> int:
+def euler_67() -> int:
     with open(TRIANGLE_FILENAME, "r") as f:
         triangle_text = f.read()
     triangle = [
         list(map(int, line.split())) for line in triangle_text.strip().split("\n")
     ]
-    print(triangle)
     last_line = triangle[0]
     for line in triangle[1:]:
         new_line = []
@@ -26,4 +25,4 @@ def euler_18() -> int:
 
 
 if __name__ == "__main__":
-    print(euler_18())
+    print(euler_67())
